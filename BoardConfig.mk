@@ -44,7 +44,6 @@ TARGET_SCREEN_DENSITY := 440
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_pissarro
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_pissarro
 
 # Kernel
 BOARD_DTB_OFFSET := 0x07c08000

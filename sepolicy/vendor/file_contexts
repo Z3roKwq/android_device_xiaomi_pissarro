@@ -50,10 +50,6 @@
 /data/vendor/fpc(/.*)?                                                                                 u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/gf_data(/.*)?                                                                             u:object_r:vendor_fingerprint_data_file:s0
 
-# Light
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.xiaomi                                u:object_r:hal_light_default_exec:s0
-/dev/xiaomi-touch                                                                                      u:object_r:vendor_touchfeature_device:s0
-
 # NFC
 /dev/nq-nci                                                                                            u:object_r:nfc_device:s0
 /dev/p73                                                                                               u:object_r:nfc_device:s0
@@ -64,6 +60,7 @@
 # Sensor
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.pissarro-multihal              u:object_r:mtk_hal_sensors_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                 u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+/dev/xiaomi-touch                                                                                      u:object_r:vendor_touchfeature_device:s0
 /dev/elliptic[0-1]                                                                                     u:object_r:sensor_device:s0
 
 # Thermal

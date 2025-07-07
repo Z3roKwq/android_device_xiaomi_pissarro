@@ -23,6 +23,5 @@ PRODUCT_MODEL := Redmi Note 11 Pro+ 5G
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="pissarro-user 13 TP1A.220624.014 V816.0.2.0.TKTMIXM release-keys"
-
-BUILD_FINGERPRINT := Redmi/pissarro/pissarro:12/SP1A.210812.016/V816.0.2.0.TKTMIXM:user/release-keys
+    BuildDesc="pissarro-user 13 TP1A.220624.014 V816.0.17.0.TKTMIXM release-keys" \
+    BuildFingerprint=Redmi/pissarro/pissarro:12/SP1A.210812.016/V816.0.17.0.TKTMIXM:user/release-keys

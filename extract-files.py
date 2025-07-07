@@ -24,61 +24,98 @@ from extract_utils.main import (
 namespace_imports = [
     'device/xiaomi/pissarro',
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
     'hardware/xiaomi',
     'vendor/xiaomi/pissarro',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('libsink',): lib_fixup_remove,
+    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
     (
-        'vendor/lib/libmtkcam_stdutils.so',
-        'vendor/lib64/libmtkcam_stdutils.so',
-        'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so',
-        'vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so',
-        'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so'
-    ): blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so'),
-    (
-        'vendor/bin/hw/android.hardware.gnss-service.mediatek',
-        'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'
-    ): blob_fixup()
-        .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
-    (
-        'system_ext/lib64/libsource.so'
+        'system/lib64/libsource.so',
     ): blob_fixup()
         .add_needed('libui_shim.so'),
+    (
+        'system/lib64/libsink_mtk.so',
+    ): blob_fixup()
+        .add_needed('libshim_sink.so'),
+    (
+        'system/lib64/libimsma.so',
+    ): blob_fixup()
+        .replace_needed('libsink.so', 'libsink_mtk.so'),
+    (
+        'vendor/lib/libteei_daemon_vfs.so',
+        'vendor/lib64/lib3a.ae.stat.so',
+        'vendor/lib64/lib3a.flash.so',
+        'vendor/lib64/lib3a.sensors.color.so',
+        'vendor/lib64/lib3a.sensors.flicker.so',
+        'vendor/lib64/libaaa_ltm.so',
+        'vendor/lib64/libteei_daemon_vfs.so',
+        'vendor/lib64/libSQLiteModule_VER_ALL.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
     (
         'vendor/bin/mnld',
         'vendor/lib/libaalservice.so',
         'vendor/lib64/libaalservice.so',
-        'vendor/lib64/libcam.utils.sensorprovider.so'
+        'vendor/lib64/libcam.utils.sensorprovider.so',
     ): blob_fixup()
         .add_needed('libshim_sensors.so'),
     (
-        'system_ext/lib64/libsink.so'
+        'vendor/lib/libnvram.so',
+        'vendor/lib64/libnvram.so',
+        'vendor/lib64/libsysenv.so',
+        'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron',
     ): blob_fixup()
-        .add_needed('libshim_sink.so'),
+        .add_needed('libbase_shim.so'),
     (
-        'vendor/etc/init/init.batterysecret.rc'
+        'vendor/lib64/libmnl.so',
     ): blob_fixup()
-        .regex_replace(r'.*seclabel.*\n', ''),
+        .add_needed('libcutils.so'),
     (
-        'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc'
+        'vendor/lib64/libalLDC.so',
+        'vendor/lib64/libalhLDC.so',
     ): blob_fixup()
-        .regex_replace('start', 'enable'),
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    (
+        'vendor/lib/libvcodec_oal.so',
+    ): blob_fixup()
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+    (
+        'vendor/bin/hw/android.hardware.gnss-service.mediatek', 
+        'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     (
         'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b',
-        'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service'
+    ): blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
+        .add_needed('libminijail.so')
+        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
+    (
+        'vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so',
+        'vendor/lib64/libmtkcam_stdutils.so',
+        'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so',
+        'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so',
+    ): blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so'),
+    (
+        'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
-    (
-        'vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc'
-    ): blob_fixup()
-        .regex_replace(r'on property.*\n.*\n', ''),
 }
 
 module = ExtractUtilsModule(
@@ -87,7 +124,6 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    check_elf=True,
     add_firmware_proprietary_file=True,
 )
 

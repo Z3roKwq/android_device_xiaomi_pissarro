@@ -1,4 +1,4 @@
-# Unpinned blobs from MIUI V14.0.8.0.TKTMIXM (pissarro) fastboot package
+# Unpinned blobs from HyperOS V816.0.17.0.TKTMIXM (pissarro) fastboot package
 
 audio_dsp.img;AB
 cam_vpu1.img;AB

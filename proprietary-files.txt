@@ -200,8 +200,8 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
-# Bluetooth (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/soc5_0_ram_bt_1_1_hdr.bin|da82964b87491348caf2e7ebf761cdec7cb8066e
+# Bluetooth (Firmware) - from a34xxx-user 15 AP3A.240905.015.A2 A346BXXU9DYF4 release-keys
+vendor/firmware/soc5_0_ram_bt_1_1_hdr.bin|f205a94e0741685247ec104d314d4edc5375e0e1
 
 # Camera
 vendor/bin/hw/camerahalserver
@@ -1235,9 +1235,9 @@ vendor/etc/camera/vidhance_calibration
 vendor/bin/conninfra_loader
 vendor/firmware/conninfra.cfg
 
-# Connectivity (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin|4aef2e830860f76b4d0c383eb16433ecc0e1c740
-vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin|81f9c347afd4ee17a257cb07c4762c97c17d7db3
+# Connectivity (Firmware) - from a34xxx-user 15 AP3A.240905.015.A2 A346BXXU9DYF4 release-keys
+vendor/firmware/soc5_0_ram_mcu_1_1_hdr.bin|55f6216ffb4327b30b1a2cca8a46f92bc1ee2f8e
+vendor/firmware/soc5_0_ram_wmmcu_1_1_hdr.bin|38a9d090ee59efddba8fb816a07039ff489ab3b8
 
 # ConsumerIr
 vendor/lib64/hw/consumerir.common.so
@@ -1902,5 +1902,5 @@ vendor/etc/wifi/passpointProfile.conf
 vendor/firmware/wifi.cfg
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 
-# Wi-Fi (Firmware) - from a34xxx-user 13 TP1A.220624.014 A346BXXU3AWF1 release-keys
-vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin|a5eac373bd44011512f43fb0cbd38482349be367
+# Wi-Fi (Firmware) - from a34xxx-user 15 AP3A.240905.015.A2 A346BXXU9DYF4 release-keys
+vendor/firmware/WIFI_RAM_CODE_soc5_0_1_1.bin|88e00e6272b01d5cfa4036953f5fc8f22e69ddba

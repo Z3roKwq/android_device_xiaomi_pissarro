@@ -1382,6 +1382,8 @@ vendor/lib/libdeccfg.so
 vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
 vendor/lib/libstagefrightdolby.so
+vendor/lib/libmisound.so
+vendor/lib/libmisoundcrossfade.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswvqe.so
@@ -1393,6 +1395,8 @@ vendor/lib64/libdlbdsservice.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefrightdolby.so
+vendor/lib64/libmisound.so
+vendor/lib64/libmisoundcrossfade.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libswvqe.so

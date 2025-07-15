@@ -2,5 +2,5 @@
 allow hal_power_default sysfs_gpu:dir search;
 allow hal_power_default sysfs_gpu:file rw_file_perms;
 
-# DT2W
+# Power (DT2W)
 allow hal_power_default vendor_touchfeature_device:chr_file rw_file_perms;

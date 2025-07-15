@@ -16,7 +16,7 @@
 #define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 #define TOUCH_ID 0
 #define TOUCH_MAGIC 0x5400
-#define TOUCH_IOC_SETMODE TOUCH_MAGIC + SET_CUR_VALUE
+#define TOUCH_IOC_SETMODE _IOW(TOUCH_MAGIC, SET_CUR_VALUE, int[3])
 
 namespace aidl {
 namespace google {

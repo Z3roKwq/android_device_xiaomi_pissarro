@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2019 The Android Open Source Project
-     Copyright (C) 2022 The LineageOS Project
+     Copyright (C) 2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 
@@ -15,6 +14,22 @@
 
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool name="config_wifi5ghzSupport">true</bool>
+
+    <!-- Boolean indicating whether bridged soft AP mode is supported on this device.
+         Bridged mode allows the soft AP to bridge traffic between clients -->
+    <bool translatable="false" name="config_wifiBridgedSoftApSupported">false</bool>
+
+    <!-- Boolean indicating whether multi-STA local only concurrency is enabled.
+         This allows multiple station connections for local-only networks -->
+    <bool translatable="false" name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">false</bool>
+
+    <!-- Boolean indicating whether multi-STA network switching with make-before-break is enabled.
+         This feature allows seamless switching between networks without disconnecting first -->
+    <bool translatable="false" name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">false</bool>
+
+    <!-- Boolean indicating whether multi-STA restricted concurrency is enabled.
+         This limits concurrent connections to reduce power consumption and interference -->
+    <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">false</bool>
 
     <!-- Indicates that SAE Hash-to-Element is supported on this device -->
     <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
@@ -43,6 +58,10 @@
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
+    <!-- Boolean indicating whether SAE (Simultaneous Authentication of Equals) is supported for soft AP.
+         SAE provides stronger security than WPA2-PSK by using password-based authentication -->
+    <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
+
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
     <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">100</integer>
 
@@ -56,10 +75,19 @@
          range string like '36-48,149'. -->
     <string translatable="false" name="config_wifiSoftap5gChannelList">36,38,40,42,44,46,48,149,153,157,161,165</string>
 
+    <!-- List of allowed channels in 60GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '1-6'. Usually empty as 60GHz is rarely used for soft AP -->
+    <string translatable="false" name="config_wifiSoftap60gChannelList"></string>
+
     <!-- List of allowed channels in 6GHz band for softap. If the device doesn't want to restrict
          channels this should be empty. Values is a comma separated channel string and/or channel
          range string like '36-48,149'. -->
     <string translatable="false" name="config_wifiSoftap6gChannelList">5,21,37,53,69,85,101,117,133,149,165,181,197,213,229</string>
+
+    <!-- The OUI (Organizationally Unique Identifier) to use for random MAC address generation.
+         This 3-byte prefix identifies the manufacturer portion of the MAC address -->
+    <string translatable="false" name="config_wifi_random_mac_oui">00-0C-E7</string>
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->

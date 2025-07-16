@@ -254,7 +254,7 @@ PRODUCT_PACKAGES += \
    SystemUIOverlayPissarro \
    TelephonyResOverlayPissarro \
    TetheringResOverlayPissarro \
-   WifiOverlay
+   WifiResOverlayPissarro
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 

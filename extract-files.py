@@ -45,7 +45,7 @@ blob_fixups: blob_fixups_user_type = {
     (
         'system/lib64/libsink_mtk.so',
     ): blob_fixup()
-        .add_needed('libshim_sink.so'),
+        .add_needed('libaudioclient_shim.so'),
     (
         'system/lib64/libimsma.so',
     ): blob_fixup()
@@ -75,7 +75,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libaalservice.so',
         'vendor/lib64/libcam.utils.sensorprovider.so',
     ): blob_fixup()
-        .add_needed('libshim_sensors.so'),
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     (
         'vendor/lib/libnvram.so',
         'vendor/lib64/libnvram.so',

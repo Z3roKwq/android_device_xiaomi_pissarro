@@ -54,9 +54,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service \
     android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
@@ -67,13 +67,10 @@ PRODUCT_PACKAGES += \
     audio_policy.stub
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation.vendor \
-    libunwindstack.vendor \
     libalsautils \
     libtinycompress \
     libdynproc \
-    libhapticgenerator \
-    libsqlite.vendor \
+    libhapticgenerator
 
 PRODUCT_PACKAGES += \
     XiaomiDolby \
@@ -90,19 +87,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
-
-PRODUCT_PACKAGES += \
-    libcamera_metadata.vendor \
-    libpng.vendor
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth@1.1.vendor \
     libbluetooth_audio_session
 
 # ConsumerIr
@@ -116,22 +103,15 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@4.0.vendor \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek-mali
 
 PRODUCT_PACKAGES += \
-    libdrm.vendor \
     libutils-v32
-
-PRODUCT_PACKAGES += \
-    libutilscallstack.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.4.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    android.hardware.drm-service.clearkey
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -146,31 +126,14 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss-V1-ndk.vendor \
-    android.hardware.gnss@2.1.vendor
-
-PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libexpat.vendor
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0.vendor
-
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder.vendor \
+    libhidltransport
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -185,14 +148,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor \
-    libkeymaster4support.vendor \
-    libkeymaster4.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -205,11 +160,6 @@ $(call soong_config_set, lineage_health, charging_control_supports_bypass, false
 
 # Media
 PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_hidl@1.2.vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libcodec2_soft_common.vendor \
     libstagefright_foundation-v33
 
 PRODUCT_COPY_FILES += \
@@ -218,11 +168,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor \
-    libtextclassifier_hash.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -310,12 +255,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
-    libmtkperf_client_vendor \
     libmtkperf_client
-
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -325,11 +265,6 @@ $(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libp
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio@1.6.vendor
 
 # Radio (IMS)
 PRODUCT_BOOT_JARS += \
@@ -362,14 +297,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6877.rc
 
-# Secure Element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor
-
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal \
-    android.frameworks.sensorservice@1.0.vendor
+    android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -394,11 +324,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3.vendor \
-    android.hardware.usb.gadget@1.1.vendor
-
 # Vendor Init
 $(call soong_config_set, libinit, vendor_init_lib, //$(LOCAL_PATH):init_xiaomi_pissarro)
 
@@ -417,10 +342,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-wrapper \
     wpa_supplicant
-
-PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)

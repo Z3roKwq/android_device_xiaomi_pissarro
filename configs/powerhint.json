@@ -54,7 +54,7 @@
       "Path": "/proc/ppm/policy/cluster_1_max_freq",
       "Values": [
         "-1",
-        "2500000",
+        "2600000",
         "2400000",
         "2275000",
         "2150000",
@@ -78,7 +78,7 @@
       "Name": "CPUBigClusterMinFreq",
       "Path": "/proc/ppm/policy/cluster_1_min_freq",
       "Values": [
-        "2500000",
+        "2600000",
         "2400000",
         "2275000",
         "2150000",

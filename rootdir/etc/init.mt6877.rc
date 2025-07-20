@@ -759,14 +759,6 @@ on boot
     chmod 0660 /proc/ppm/policy/hica_variant
     chown system system /proc/ppm/policy/hica_settings/L_ONLY_to_4L_LL/loading_hold_time
     chmod 0660 /proc/ppm/policy/hica_settings/L_ONLY_to_4L_LL/loading_hold_time
-    chown system system /proc/ppm/policy/cluster_0_min_freq
-    chmod 0660 /proc/ppm/policy/cluster_0_min_freq
-    chown system system /proc/ppm/policy/cluster_0_max_freq
-    chmod 0660 /proc/ppm/policy/cluster_0_max_freq
-    chown system system /proc/ppm/policy/cluster_1_min_freq
-    chmod 0660 /proc/ppm/policy/cluster_1_min_freq
-    chown system system /proc/ppm/policy/cluster_1_max_freq
-    chmod 0660 /proc/ppm/policy/cluster_1_max_freq
 
     # cpu_loading
     chown system system /proc/cpu_loading/onoff

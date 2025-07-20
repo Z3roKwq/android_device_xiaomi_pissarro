@@ -781,6 +781,10 @@ on boot
     chmod 0660 /proc/cpufreq/cpufreq_power_mode
     chown system system /proc/cpufreq/enable_hw_gov
     chmod 0660 /proc/cpufreq/enable_hw_gov
+    chown system system /proc/cpufreq/cpufreq_cci_mode
+    chmod 0664 /proc/cpufreq/cpufreq_cci_mode
+    chown system system /proc/cpufreq/cpufreq_sched_disable
+    chmod 0664 /proc/cpufreq/cpufreq_sched_disable
 
     # BW monitor
     chown system system /proc/fliperfs/cg_enable

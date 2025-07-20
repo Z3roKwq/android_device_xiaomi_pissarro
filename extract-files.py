@@ -51,6 +51,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libsink.so', 'libsink_mtk.so'),
     (
+        'system/priv-app/ImsService/ImsService.apk',
+    ): blob_fixup()
+        .apktool_patch('blob-patches/ImsService.patch'),
+    (
         'vendor/lib/libteei_daemon_vfs.so',
         'vendor/lib64/lib3a.ae.stat.so',
         'vendor/lib64/lib3a.flash.so',

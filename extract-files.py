@@ -51,6 +51,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libsink.so', 'libsink_mtk.so'),
     (
+        'system/framework/mediatek-telephony-base.jar',
+    ): blob_fixup()
+        .apktool_patch('blob-patches/MediatekTelephonyBase.patch'),
+    (
         'system/priv-app/ImsService/ImsService.apk',
     ): blob_fixup()
         .apktool_patch('blob-patches/ImsService.patch'),

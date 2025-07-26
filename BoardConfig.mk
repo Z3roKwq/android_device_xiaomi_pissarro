@@ -58,7 +58,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x07c08000
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.tee_type=2
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.tee_type=2 cpuidle_sysfs_switch
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
 BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE)

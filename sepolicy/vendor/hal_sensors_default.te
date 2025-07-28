@@ -9,3 +9,5 @@ allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
 
 # Allow hal_sensors_default to read/write to sensor device
 allow hal_sensors_default sensor_device:chr_file rw_file_perms;
+
+binder_call(hal_sensors_default, system_server)

@@ -9,9 +9,9 @@ vendor/etc/aurisys_param/FV-SAM-MTKXX.dat
 vendor/lib/hw/audio.primary.mt6877.so
 vendor/lib/hw/audio.r_submix.mt6877.so
 vendor/lib/hw/sound_trigger.primary.default.so
-vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so;FIX_SONAME
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
@@ -32,14 +32,20 @@ vendor/lib/libfvaudio.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkshifter_vendor.so
+vendor/lib/libMtkSpeechEnh.so
 vendor/lib/libnxp_extamp_intf.so
 vendor/lib/librt_extamp_intf.so
 vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
+vendor/lib/libthha.so;DISABLE_CHECKELF
 vendor/lib/libvow_ap_test_aa.so
 vendor/lib/libvow_ap_test_ha.so
 vendor/lib/libvow_ap_test_hh.so
 vendor/lib/libvow_ap_test_nn.so
+vendor/lib64/libalCFR.so
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
+vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 
 # Audio Configs
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -984,9 +990,6 @@ vendor/lib64/libaibc_tuning.so
 vendor/lib64/libaibc_tuning_p2.so
 vendor/lib64/libaibc_tuning_p3.so
 vendor/lib64/libainrcore.so
-vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so
-vendor/lib64/libalhLDC.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_dc_plugin_xiaomi_v2.so
 vendor/lib64/libarcsoft_beautyshot.so
@@ -1308,6 +1311,9 @@ vendor/firmware/goodix_gt9896_fw_k16.bin
 
 # Dolby
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/misound_res.bin
+vendor/etc/misound_res_headphone.bin
+vendor/etc/misound_res_spk.bin
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
@@ -1316,10 +1322,12 @@ vendor/lib/libdeccfg.so
 vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
 vendor/lib/libstagefrightdolby.so
+vendor/lib/libmisound.so
+vendor/lib/libmisoundcrossfade.so
+vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswvqe.so
-vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
@@ -1327,10 +1335,12 @@ vendor/lib64/libdlbdsservice.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefrightdolby.so
+vendor/lib64/libmisound.so
+vendor/lib64/libmisoundcrossfade.so
+vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
@@ -1639,7 +1649,6 @@ vendor/lib64/hw/sensors.elliptic.so;FIX_SONAME
 vendor/lib64/hw/sensors.mt6877.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
-vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 vendor/lib64/libsensor_custom.so
 
 # Sensors (citsensor)

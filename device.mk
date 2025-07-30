@@ -245,6 +245,10 @@ PRODUCT_COPY_FILES += \
 # Power (DT2W)
 $(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
 
+# Power (Power Off Alarm)
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
+
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
 

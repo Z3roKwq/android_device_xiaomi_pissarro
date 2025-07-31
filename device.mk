@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
 
 # ConsumerIr
 PRODUCT_PACKAGES += \
-    android.hardware.ir-service.example
+    android.hardware.ir-service.lineage
 
 # Cgroup
 PRODUCT_COPY_FILES += \

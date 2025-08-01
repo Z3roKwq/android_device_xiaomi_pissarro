@@ -284,6 +284,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-subhal-impl-1.0:64 \
     android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_COPY_FILES += \

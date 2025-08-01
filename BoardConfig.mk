@@ -9,6 +9,9 @@ DEVICE_PATH := device/xiaomi/pissarro
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Enable 64-bit for non-zygote.
+ZYGOTE_FORCE_64 := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \

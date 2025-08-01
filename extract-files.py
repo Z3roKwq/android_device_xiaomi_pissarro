@@ -115,7 +115,11 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib64/libmnl.so'
     ): blob_fixup()
-        .add_needed('libcutils.so')
+        .add_needed('libcutils.so'),
+    (
+        'vendor/lib64/libdlbdsservice.so'
+    ): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
 }
 
 module = ExtractUtilsModule(

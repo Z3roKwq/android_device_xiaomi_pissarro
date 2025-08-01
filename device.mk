@@ -55,22 +55,22 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.primary.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    audio_policy.stub
+    audio.bluetooth.default:32 \
+    audio.primary.default:32 \
+    audio.r_submix.default:32 \
+    audio.usb.default:32 \
+    audio_policy.stub:32
 
 PRODUCT_PACKAGES += \
-    libalsautils \
-    libtinycompress \
-    libdynproc \
-    libhapticgenerator
+    libalsautils:32 \
+    libtinycompress:32 \
+    libdynproc:32 \
+    libhapticgenerator:32
 
 PRODUCT_PACKAGES += \
     XiaomiDolby \
@@ -87,10 +87,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Bluetooth
+# Bluetooth Audio
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    libbluetooth_audio_session
+    android.hardware.bluetooth.audio-impl:32 \
+    libbluetooth_audio_session:32
 
 # ConsumerIr
 PRODUCT_PACKAGES += \

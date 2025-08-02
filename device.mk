@@ -60,16 +60,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default:32 \
-    audio.primary.default:32 \
-    audio.r_submix.default:32 \
-    audio.usb.default:32 \
-    audio_policy.stub:32
-
-PRODUCT_PACKAGES += \
-    libalsautils:32 \
-    libtinycompress:32 \
-    libdynproc:32 \
     libhapticgenerator:32
 
 PRODUCT_PACKAGES += \
@@ -89,6 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth Audio
 PRODUCT_PACKAGES += \
+    audio.bluetooth.default:32 \
     android.hardware.bluetooth.audio-impl:32 \
     libbluetooth_audio_session:32
 

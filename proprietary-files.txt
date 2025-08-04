@@ -1435,7 +1435,6 @@ vendor/lib/libvpud_vcodec.so
 vendor/lib64/libvpu.so
 
 # Media (Configs)
-vendor/etc/mtk_platform_codecs_config.xml
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 

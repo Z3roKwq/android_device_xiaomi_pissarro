@@ -1401,6 +1401,8 @@ vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
+vendor/lib64/librpc.so
+vendor/lib64/libviagpsrpc.so
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk

@@ -103,12 +103,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     (
-        'vendor/lib/libvcodec_oal.so'
-    ): blob_fixup()
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
-    (
         'vendor/lib/libteei_daemon_vfs.so',
         'vendor/lib64/lib3a.ae.stat.so',
         'vendor/lib64/lib3a.flash.so',

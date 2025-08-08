@@ -69,6 +69,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libminijail.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     (
+        'vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc'
+    ): blob_fixup()
+        .regex_replace('@1.2-mediatek\n', '@1.2-mediatek-64b\n'),
+    (
         'vendor/lib/hw/audio.primary.mt6877.so'
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')

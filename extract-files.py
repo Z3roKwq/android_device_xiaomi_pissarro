@@ -74,6 +74,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v31.so'),
     (
+        'vendor/lib64/hw/hwcomposer.mt6877.so'
+    ): blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+    (
         'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron',
         'vendor/lib/libnvram.so',
         'vendor/lib64/libnvram.so',

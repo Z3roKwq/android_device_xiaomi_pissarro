@@ -1664,5 +1664,5 @@
         not perform any checks at all.
     -->
     <VideoDecoderCap name="wmv" enabled="true"/>
-    <AudioDecoderCap name="wma" enabled="true"/>
+    <AudioDecoderCap name="wma" enabled="false"/>
 </MediaSettings>

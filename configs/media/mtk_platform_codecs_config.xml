@@ -29,15 +29,6 @@
                driverIntf="v4l2"
                maxConcurrentInstances="32"
                colorConvertPixelFormat="4096" />
-        <Video name="c2.mtk.vp9.decoder"
-               type="video/x-vnd.on2.vp9"
-               driverIntf="v4l2"
-               maxConcurrentInstances="32"
-               colorConvertPixelFormat="4096" />
-        <Video name="c2.mtk.vp9.decoder.secure"
-               type="video/x-vnd.on2.vp9"
-               driverIntf="v4l2"
-               maxConcurrentInstances="1" />
         <Video name="c2.mtk.mpeg2.decoder"
                type="video/mpeg2"
                driverIntf="v4l2"

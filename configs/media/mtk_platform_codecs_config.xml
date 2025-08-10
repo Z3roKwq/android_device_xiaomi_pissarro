@@ -20,17 +20,6 @@
                driverIntf="v4l2"
                maxConcurrentInstances="32"
                colorConvertPixelFormat="4096" />
-        <Video name="c2.mtk.hevc.decoder"
-               type="video/hevc"
-               driverIntf="v4l2"
-               maxConcurrentInstances="32"
-               metaBufferSize="4096"
-               colorConvertPixelFormat="4096" />
-        <Video name="c2.mtk.hevc.decoder.secure"
-               type="video/hevc"
-               driverIntf="v4l2"
-               maxConcurrentInstances="1"
-               metaBufferSize="4096" />
         <Video name="c2.mtk.heif.decoder"
                type="image/vnd.android.heic"
                driverIntf="v4l2"

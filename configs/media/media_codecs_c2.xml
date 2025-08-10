@@ -54,21 +54,6 @@
             <Limit name="concurrent-instances" max="32" />
             <Limit name="performance-point-1280x720" value="30" />
         </MediaCodec>
-        <MediaCodec name="c2.mtk.hevc.decoder" type="video/hevc" >
-            <Alias name="OMX.MTK.VIDEO.DECODER.HEVC" />
-            <Feature name="adaptive-playback" />
-            <Limit name="size" min="16x16" max="4096x2176" />
-            <Limit name="concurrent-instances" max="32" />
-            <Limit name="performance-point-3840x2160" value="30" />
-        </MediaCodec>
-        <MediaCodec name="c2.mtk.hevc.decoder.secure" type="video/hevc" >
-            <Alias name="OMX.MTK.VIDEO.DECODER.HEVC.secure" />
-            <Feature name="secure-playback" required="true" />
-            <Feature name="adaptive-playback" />
-            <Limit name="size" min="16x16" max="1920x1088" />
-            <Limit name="concurrent-instances" max="1" />
-            <Limit name="performance-point-1920x1088" value="30" />
-        </MediaCodec>
         <MediaCodec name="c2.mtk.heif.decoder" type="image/vnd.android.heic" >
             <Alias name="OMX.MTK.VIDEO.DECODER.HEIF" />
             <Feature name="adaptive-playback" />

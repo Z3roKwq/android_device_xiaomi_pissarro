@@ -145,7 +145,6 @@
             <kctl name="RCV DSP RX2 Source" value="ASPRX1" />
             <kctl name="RCV ASPTX Ref" value="Ref" />
             <kctl name="RCV PCM Source" value="DSP" />
-            <kctl name="RCV Fast Use Case Switch Enable" value="0"/>
             <kctl name="RCV Fast Use Case Delta File" value="cs35l41-delta-rcv-handsfree.txt"/>
             <kctl name="RCV Fast Use Case Switch Enable" value="1"/>
             <kctl name="RCV AMP PCM Gain" value="14" />
@@ -156,7 +155,6 @@
             <kctl name="DSP RX2 Source" value="ASPRX2" />
             <kctl name="ASPTX Ref" value="Ref" />
             <kctl name="PCM Source" value="DSP" />
-            <kctl name="Fast Use Case Switch Enable" value="0"/>
             <kctl name="Fast Use Case Delta File" value="cs35l41-delta-spk-handsfree.txt"/>
             <kctl name="Fast Use Case Switch Enable" value="1"/>
             <kctl name="AMP PCM Gain" value="17" />
@@ -1873,7 +1871,7 @@
             <kctl name="UL6_CH1 DL6_CH1" value="0" />
             <kctl name="UL6_CH2 DL6_CH2" value="0" />
         </path>
-        <path name="PLAYBACK4_TO_CAPTURE6" value="turnoff">
+        <path name="PLAYBACK4_TO_CAPTURE6" value="turnon">
             <kctl name="UL6_CH1 DL4_CH1" value="1" />
             <kctl name="UL6_CH2 DL4_CH2" value="1" />
         </path>

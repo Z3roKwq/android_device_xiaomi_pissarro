@@ -179,16 +179,19 @@ ro.vendor.mtk_log_hide_gps=1
 # IMS
 persist.vendor.anr.enhancement=0
 persist.vendor.ims_support=1
-persist.vendor.mtk.volte.enable=1
-persist.vendor.mtk_ct_volte_support=3
+persist.vendor.mims_support=2
 persist.vendor.mtk_dynamic_ims_switch=1
-persist.vendor.mtk_wfc_support=1
-persist.vendor.vilte_support=1
-persist.vendor.viwifi_support=1
+persist.vendor.mtk_sim_switch_policy=2
 persist.vendor.volte_support=1
+persist.vendor.mtk_ct_volte_support=3
+persist.vendor.mtk.volte.enable=1
+persist.vendor.vilte_support=1
+persist.vendor.mtk.vilte.enable=1
 persist.vendor.vonr_setting_support=1
-ro.vendor.md_auto_setup_ims=1
-ro.vendor.mtk_data_config=1
+persist.vendor.mtk.vonr.enable=1
+persist.vendor.mtk.vinr.enable=1
+persist.vendor.mtk_wfc_support=1
+persist.vendor.viwifi_support=1
 
 # Keymaster
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -236,8 +239,6 @@ ro.vendor.mtk_nn_support=1
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.md_c2k_cap_dep_check=0
-persist.vendor.mims_support=2
-persist.vendor.mtk_sim_switch_policy=2
 persist.vendor.radio.dynamic_sar=1
 persist.vendor.radio.fd.counter=150
 persist.vendor.radio.fd.off.counter=50

@@ -73,6 +73,20 @@ ro.hardware.consumerir=common
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dex2oat-cpu-set=0,1,2,3
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=1m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.systemservercompilerfilter=speed-profile
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+persist.sys.dalvik.vm.lib.2=libart.so
+ro.dalvik.vm.native.bridge=0
 
 # Display
 debug.mediatek.appgamepq_compress=1

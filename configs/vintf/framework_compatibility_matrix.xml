@@ -49,14 +49,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.bluetooth.audio</name>
-        <version>2.0-2</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.camera.atms</name>
         <version>1.0</version>
         <interface>
@@ -77,22 +69,6 @@
         <version>1.0</version>
         <interface>
             <name>IComposerExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.mmagent</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IMMAgent</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.mms</name>
-        <version>1.0-6</version>
-        <interface>
-            <name>IMms</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -158,14 +134,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.videotelephony</name>
-        <version>1.0</version>
-        <interface>
-            <name>IVideoTelephony</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.citsensorservice</name>
         <version>1.0-1</version>
         <interface>
@@ -178,14 +146,6 @@
         <version>2.0</version>
         <interface>
             <name>IThhDevice</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.dtool</name>
-        <version>1.0</version>
-        <interface>
-            <name>IDtool</name>
             <instance>default</instance>
         </interface>
     </hal>

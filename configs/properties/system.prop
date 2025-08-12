@@ -1,3 +1,6 @@
+# Display
+persist.sys.brightness.low.gamma=true
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1

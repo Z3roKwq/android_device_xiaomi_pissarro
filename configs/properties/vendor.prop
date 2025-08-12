@@ -89,6 +89,7 @@ persist.sys.dalvik.vm.lib.2=libart.so
 ro.dalvik.vm.native.bridge=0
 
 # Display
+debug.gralloc.enable_fb_ubwc=1
 debug.mediatek.appgamepq_compress=1
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_gl_backpressure=1
@@ -103,6 +104,7 @@ debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
+persist.vendor.gralloc.optimize=1
 ro.hardware.egl=meow
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
@@ -119,6 +121,7 @@ ro.surface_flinger.set_touch_timer_ms=3000
 ro.vendor.composer_version=2.3
 ro.vendor.mml.mtk_mml_support=0
 ro.vendor.mtk_aal_support=1
+ro.vendor.mtk.gralloc.cache_instances=1
 ro.vendor.mtk_pq_color_mode=3
 ro.vendor.mtk_pq_support=2
 ro.vendor.pq.mtk_aal_support=1

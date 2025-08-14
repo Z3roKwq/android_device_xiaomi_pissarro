@@ -319,6 +319,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \

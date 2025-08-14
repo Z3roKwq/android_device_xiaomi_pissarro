@@ -73,6 +73,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('start', 'enable'),
     (
+        'vendor/etc/init/init.batterysecret.rc'
+    ): blob_fixup()
+        .regex_replace('.*seclabel.*\n', ''),
+    (
         'vendor/lib/hw/audio.primary.mt6877.so'
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')

@@ -69,6 +69,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('@1.2-mediatek\n', '@1.2-mediatek-64b\n'),
     (
+        'vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc'
+    ): blob_fixup()
+        .regex_replace('on property[^\n]*\n[^\n]*\n', ''),
+    (
         'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc'
     ): blob_fixup()
         .regex_replace('start', 'enable'),
